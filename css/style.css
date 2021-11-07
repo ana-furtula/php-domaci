@@ -1,0 +1,73 @@
+
+* {
+    font-family: Montserrat;
+}
+
+body{
+    background-color: antiquewhite;
+    background-image: url("../img/login1.jpg");
+    background-repeat: no-repeat;
+}
+
+form {
+    display: block;
+    margin-top: 330px;
+    height: 400px;
+    width: 600px;
+}
+
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.btn.btn-primary{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background: rgb(138, 228, 138);
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+    border: orange;
+}
+
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+.main-div {
+    
+    border-radius: 2px;
+    margin: 10px auto 30px;
+    max-width: 38%;
+    padding: 50px 70px 70px 71px
+}
+
+.login-form {
+    /* background-image: url(../img/background.jpg); */
+    text-align: center;
+}
+
+
+.btn.btn-primary:hover {
+    background: rgb(138, 228, 138) none repeat scroll 0 0;
+    border-color: black;
+    color: black;
+    font-size: 20px;
+    width: 60%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+}
