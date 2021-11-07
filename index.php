@@ -32,7 +32,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <title>Log in</title>
 
 </head>
