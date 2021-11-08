@@ -14,6 +14,7 @@ function deleteStudent() {
             alert('Student deleted');
         } else {
             alert('Student cannot be deleted');
+            location.reload(true);
         }
     });
 
@@ -43,6 +44,7 @@ $("#updateForm").submit(function() {
                 location.reload(true);
             } else {
                 alert("Student cannot be updated.");
+                location.reload(true);
             }
         });
     }
@@ -70,6 +72,7 @@ $('#addForm').submit(function() {
             location.reload(true);
         } else {
             alert("Student cannot be added");
+            location.reload(true);
         }
     });
 

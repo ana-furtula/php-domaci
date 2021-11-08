@@ -2,7 +2,7 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 90%;
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-left: 5rem;
 }
 
@@ -23,6 +23,12 @@ tr:first-child {
 
 tr:not(:first-child):hover {
     background-color: #D6EEEE;
+}
+
+#addButton:hover {
+    cursor: pointer;
+    padding: 6px 5px 6px 5px;
+    display: block;
 }
 
 

@@ -64,96 +64,96 @@ if ($podaci->num_rows == 0) {
                                     <span class="checkmark"></span>
                                 </label>
                             </td>
-                        </tr>
-                <?php
+                            </tr>
+                    <?php
                     endwhile;
                 }
-                ?>
+                    ?>
                 </tbody>
             </table>
             <div class="row">
 
-            <div class="w3-container">
-               
-               <button id="btn-add" onclick="document.getElementById('id01').style.display='block'">Add new</button> 
+                <div class="w3-container">
 
-              <div id="id01" class="w3-modal">
-                  <div class="w3-modal-content" style="text-align: center;">
-                      <header class="w3-container w3-teal">
-                          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                          <h2>Add new student</h2>
-                      </header>
-                      <div class="w3-container">
-                      <form action="#" method="post" id="addForm">
-                               <div class="row">
-                                   <div class="col-md-12">
-                                       <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                           <input id="FirstName" type="text" name="FirstName" class="form-control" placeholder="First name" value="" />
-                                       </div>
-                                       <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                           <input id="LastName" type="text" name="LastName" class="form-control" placeholder="Last name" value="" />
-                                       </div>
-                                       <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                           <input id="Indeks" type="text" name="Indeks" class="form-control" placeholder="Index" value="" />
-                                       </div>
-                                       <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                           <button id="btnSave" type="submit" class="btn btn-success btn-block" style="color: white; background-color: teal; border: 1px solid white; padding: 0.5rem 3rem 0.5rem 3rem">Save
-                                           </button>
-                                       </div>
-                                       <br>
-                                   </div>
-                               </div>
-                           </form>
-                      </div>
+                    <button id="btn-add" onclick="document.getElementById('id01').style.display='block'">Add new</button>
 
-                  </div>
-              </div>
-          </div>
+                    <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content" style="text-align: center;">
+                            <header class="w3-container w3-teal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                <h2>Add new student</h2>
+                            </header>
+                            <div class="w3-container">
+                                <form action="#" method="post" id="addForm">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                                <input id="FirstName" type="text" name="FirstName" class="form-control" placeholder="First name" value="" />
+                                            </div>
+                                            <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                                <input id="LastName" type="text" name="LastName" class="form-control" placeholder="Last name" value="" />
+                                            </div>
+                                            <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                                <input id="Indeks" type="text" name="Indeks" class="form-control" placeholder="Index" value="" />
+                                            </div>
+                                            <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                                <button id="btnSave" type="submit" class="btn btn-success btn-block" style="color: white; background-color: teal; border: 1px solid white; padding: 0.5rem 3rem 0.5rem 3rem">Save
+                                                </button>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
 
                 <!-- <button id="btn-update" onclick="updateStudent()">Update</button> -->
-            <div class="w3-container">
-               
-                <button id="btn-update" onclick="document.getElementById('id01').style.display='block'">Update</button> 
+                <div class="w3-container">
 
-               <div id="id01" class="w3-modal">
-                   <div class="w3-modal-content" style="text-align: center;">
-                       <header class="w3-container w3-teal">
-                           <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                           <h2>Enter new data</h2>
-                       </header>
-                       <div class="w3-container">
-                       <form action="#" method="post" id="updateForm">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                            <input id="FirstName" type="text" name="FirstName" class="form-control" placeholder="First name" value="" />
+                    <button id="btn-update" onclick="document.getElementById('id01').style.display='block'">Update</button>
+
+                    <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content" style="text-align: center;">
+                            <header class="w3-container w3-teal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                <h2>Enter new data</h2>
+                            </header>
+                            <div class="w3-container">
+                                <form action="#" method="post" id="updateForm">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                                <input id="FirstName" type="text" name="FirstName" class="form-control" placeholder="First name" value="" />
+                                            </div>
+                                            <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                                <input id="LastName" type="text" name="LastName" class="form-control" placeholder="Last name" value="" />
+                                            </div>
+                                            <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                                <input id="Indeks" type="text" name="Indeks" class="form-control" placeholder="Index" value="" />
+                                            </div>
+                                            <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                                <button id="btnUpdate" type="submit" class="btn btn-success btn-block" style="color: white; background-color: teal; border: 1px solid white; padding: 0.5rem 3rem 0.5rem 3rem">Submit
+                                                </button>
+                                            </div>
+                                            <br>
                                         </div>
-                                        <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                            <input id="LastName" type="text" name="LastName" class="form-control" placeholder="Last name" value="" />
-                                        </div>
-                                        <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                            <input id="Indeks" type="text" name="Indeks" class="form-control" placeholder="Index" value="" />
-                                        </div>
-                                        <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                            <button id="btnUpdate" type="submit" class="btn btn-success btn-block" style="color: white; background-color: teal; border: 1px solid white; padding: 0.5rem 3rem 0.5rem 3rem">Submit
-                                            </button>
-                                        </div>
-                                        <br>
                                     </div>
-                                </div>
-                            </form>
-                       </div>
-                   </div>
-               </div>
-           </div>
-                
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <button id="btn-delete" onclick="deleteStudent()">Delete</button>
 
                 <button id="btn-sort" onclick="sortTable()">Sort</button>
 
             </div>
-           
+
 
 
             <script src="script/app.js"></script>

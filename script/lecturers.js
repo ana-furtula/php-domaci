@@ -14,6 +14,7 @@ function deleteLecturer($button) {
             location.reload(true);
         } else {
             alert('Lecturer cannot be deleted');
+            location.reload(true);
         }
     });
 }
@@ -37,6 +38,35 @@ $("#updateForm").submit(function() {
             location.reload(true);
         } else {
             alert("Lecturer cannot be updated.");
+            location.reload(true);
+        }
+    });
+
+})
+
+$('#addForm').submit(function() {
+    event.preventDefault();
+    const $form = $(this);
+    const $input = $form.find('input, select, button, textarea');
+
+    const serijalized = $form.serialize();
+    console.log(serijalized);
+
+    $input.prop('disabled', true);
+
+    request = $.ajax({
+        url: 'handler/lecturer/add.php',
+        type: 'post',
+        data: serijalized
+    });
+
+    request.done(function(response, textStatus, jqXHR) {
+        if (response == "Success") {
+            alert("Lecturer added successfully");
+            location.reload(true);
+        } else {
+            alert("Lecturer cannot be added");
+            location.reload(true);
         }
     });
 

@@ -39,6 +39,43 @@ if ($data->num_rows == 0) {
 
     <body>
         <div w3-include-html="menu.html" id="w3"></div>
+        <div style="margin-top: 2%; margin-left: 91%;">
+            <div class="w3-container">
+
+                <button id="addBtn" onclick="document.getElementById('id01').style.display='block'" style="background-color: white; border-radius: 8px; border-color: white"><img src="img/add-user.png"></img></button>
+
+                <div id="id01" class="w3-modal" style="display: none;">
+                    <div class="w3-modal-content" style="text-align: center;">
+                        <header class="w3-container w3-teal">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <h2>Add new lecturer</h2>
+                        </header>
+                        <div class="w3-container">
+                            <form action="#" method="post" id="addForm">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                            <input id="FirstName" type="text" name="FirstName" class="form-control" placeholder="First name" value="" />
+                                        </div>
+                                        <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                            <input id="LastName" type="text" name="LastName" class="form-control" placeholder="Last name" value="" />
+                                        </div>
+                                        <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                            <input id="JMBG" type="text" name="JMBG" class="form-control" placeholder="JMBG" value="" />
+                                        </div>
+                                        <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                            <button id="btnSave" type="submit" class="btn btn-success btn-block" style="color: white; background-color: teal; border: 1px solid white; padding: 0.5rem 3rem 0.5rem 3rem">Save
+                                            </button>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <table>
             <tr>
                 <th>First name</th>
@@ -57,9 +94,9 @@ if ($data->num_rows == 0) {
                     <td style="width: 12%;">
                         <div class="w3-container">
 
-                            <button id="updateBtn" onclick="document.getElementById('id01').style.display='block'; document.getElementById('ID').setAttribute('value','<?php echo $red["ID"]?>');" style="background-color: white; border-radius: 8px; border-color: white"><img src="img/refresh.png"></img></button>
+                            <button id="updateBtn" onclick="document.getElementById('id01').style.display='block'; document.getElementById('ID').setAttribute('value','<?php echo $red["ID"] ?>');" style="background-color: white; border-radius: 8px; border-color: white"><img src="img/refresh.png"></img></button>
                             <button id="deleteBtn" value="<?php echo $red["ID"] ?>" onclick="deleteLecturer(this)" style="background-color: white; border-radius: 8px; border-color: white"><img src="img/trash.png"></img></button>
-                            
+
                             <div id="id01" class="w3-modal" style="display: none;">
                                 <div class="w3-modal-content" style="text-align: center;">
                                     <header class="w3-container w3-teal">
@@ -67,11 +104,11 @@ if ($data->num_rows == 0) {
                                         <h2>Enter new data</h2>
                                     </header>
                                     <div class="w3-container">
-                                        <form action="#" method="post" id="updateForm" >
+                                        <form action="#" method="post" id="updateForm">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                                        <input id="ID" type="text" name="ID" class="form-control" readonly style="background-color: lightgray;"/>
+                                                    <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                                                        <input id="ID" type="text" name="ID" class="form-control" readonly style="background-color: lightgray;" />
                                                     </div>
                                                     <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
                                                         <input id="FirstName" type="text" name="FirstName" class="form-control" placeholder="First name" value="" />
@@ -95,7 +132,7 @@ if ($data->num_rows == 0) {
                             </div>
                         </div>
 
-                        
+
                     </td>
                 </tr>
         <?php
