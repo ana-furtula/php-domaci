@@ -111,7 +111,7 @@ if ($podaci->num_rows == 0) {
           </div>
 
                 <!-- <button id="btn-update" onclick="updateStudent()">Update</button> -->
-                <div class="w3-container">
+            <div class="w3-container">
                
                 <button id="btn-update" onclick="document.getElementById('id01').style.display='block'">Update</button> 
 

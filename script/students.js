@@ -13,7 +13,7 @@ function deleteStudent() {
             checked.closest('tr').remove();
             alert('Student deleted');
         } else {
-            alert('Student is not deleted');
+            alert('Student cannot be deleted');
         }
     });
 
@@ -29,10 +29,8 @@ $("#updateForm").submit(function() {
         return;
     } else {
         const $form = $(this);
-        const serijalizacija = $form.serialize();
-        console.log(serijalizacija + "serijalizacija");
-        const data = serijalizacija + "&idBefore=" + checked.val();
-        console.log(data);
+        const serijalized = $form.serialize();
+        const data = serijalized + "&idBefore=" + checked.val();
         request = $.ajax({
             url: 'handler/student/update.php',
             type: 'post',
@@ -55,15 +53,15 @@ $('#addForm').submit(function() {
     const $form = $(this);
     const $input = $form.find('input, select, button, textarea');
 
-    const serijalizacija = $form.serialize();
-    console.log(serijalizacija);
+    const serijalized = $form.serialize();
+    console.log(serijalized);
 
     $input.prop('disabled', true);
 
     request = $.ajax({
         url: 'handler/student/add.php',
         type: 'post',
-        data: serijalizacija
+        data: serijalized
     });
 
     request.done(function(response, textStatus, jqXHR) {

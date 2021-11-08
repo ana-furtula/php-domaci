@@ -1,9 +1,8 @@
-
 * {
     font-family: Montserrat;
 }
 
-body{
+body {
     background-color: antiquewhite;
     background-image: url("../img/login1.jpg");
     background-repeat: no-repeat;
@@ -18,7 +17,9 @@ form {
 
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
+
+input[type=text],
+input[type=password] {
     width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -28,14 +29,16 @@ input[type=text], input[type=password] {
     border-radius: 10px;
 }
 
-.btn.btn-primary{
+.btn.btn-primary {
     width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
     background: rgb(138, 228, 138);
 }
 
+
 /* Add a hover effect for buttons */
+
 button:hover {
     opacity: 0.8;
     border: orange;
@@ -43,12 +46,12 @@ button:hover {
 
 
 /* Add padding to containers */
+
 .container {
     padding: 16px;
 }
 
 .main-div {
-    
     border-radius: 2px;
     margin: 10px auto 30px;
     max-width: 38%;
@@ -59,7 +62,6 @@ button:hover {
     /* background-image: url(../img/background.jpg); */
     text-align: center;
 }
-
 
 .btn.btn-primary:hover {
     background: rgb(138, 228, 138) none repeat scroll 0 0;
