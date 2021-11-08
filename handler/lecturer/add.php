@@ -13,3 +13,4 @@ if(isset($_POST["FirstName"]) && isset($_POST["LastName"]) && isset($_POST["JMBG
         echo "Failed";
     }
 }
+?>

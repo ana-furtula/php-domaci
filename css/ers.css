@@ -1,0 +1,38 @@
+body {
+    background-image: linear-gradient(to right, #FFEFD5, #CD853F);
+    display: grid;
+    grid-template-columns: auto;
+}
+
+table {
+    border-radius: 25px;
+    grid-column: 1/span 1;
+    background-image: linear-gradient(to left, rgb(214, 198, 183), rgb(211, 188, 166));
+    padding: 2rem 2rem 2rem 2rem;
+    text-align: center;
+    font-family: arial, sans-serif;
+    border-collapse: separate;
+    width: 80%;
+    margin-top: 4rem;
+    margin-left: 10rem;
+    border-radius: 30px;
+}
+
+td,
+th {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+thead:first-child {
+    background-color: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
