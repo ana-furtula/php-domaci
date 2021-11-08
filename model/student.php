@@ -41,9 +41,4 @@ class Student{
 
 }
 
-
-
-
-
-
 ?>

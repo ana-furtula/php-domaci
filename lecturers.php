@@ -39,11 +39,9 @@ if ($data->num_rows == 0) {
 
     <body>
         <div w3-include-html="menu.html" id="w3"></div>
-        <div style="margin-top: 2%; margin-left: 91%;">
+        <div style="margin-top: 2%; margin-left: 90%;">
             <div class="w3-container">
-
-                <button id="addBtn" onclick="document.getElementById('id01').style.display='block'" style="background-color: white; border-radius: 8px; border-color: white"><img src="img/add-user.png"></img></button>
-
+                <button id="addBtn" onclick="document.getElementById('id01').style.display='block'" style="background-color:#FAEBD7; border-radius: 8px; border-color: white"><img src="img/addUser.png"></img></button>
                 <div id="id01" class="w3-modal" style="display: none;">
                     <div class="w3-modal-content" style="text-align: center;">
                         <header class="w3-container w3-teal">
@@ -94,8 +92,8 @@ if ($data->num_rows == 0) {
                     <td style="width: 12%;">
                         <div class="w3-container">
 
-                            <button id="updateBtn" onclick="document.getElementById('id01').style.display='block'; document.getElementById('ID').setAttribute('value','<?php echo $red["ID"] ?>');" style="background-color: white; border-radius: 8px; border-color: white"><img src="img/refresh.png"></img></button>
-                            <button id="deleteBtn" value="<?php echo $red["ID"] ?>" onclick="deleteLecturer(this)" style="background-color: white; border-radius: 8px; border-color: white"><img src="img/trash.png"></img></button>
+                            <button id="updateBtn" onclick="document.getElementById('id01').style.display='block'; document.getElementById('ID').setAttribute('value','<?php echo $red["ID"] ?>');" style="background-color: #FAEBD7; border-radius: 8px; border-color: white"><img src="img/refresh.png"></img></button>
+                            <button id="deleteBtn" value="<?php echo $red["ID"] ?>" onclick="deleteLecturer(this)" style="background-color: #FAEBD7; border-radius: 8px; border-color: white"><img src="img/trash.png"></img></button>
 
                             <div id="id01" class="w3-modal" style="display: none;">
                                 <div class="w3-modal-content" style="text-align: center;">

@@ -1,3 +1,7 @@
+body {
+    background-color: #FAEBD7;
+}
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -8,27 +12,33 @@ table {
 
 td,
 th {
-    border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
 
 tr {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1.5px solid lightskyblue;
 }
 
 tr:first-child {
-    background-color: bisque;
+    background-color: lightskyblue;
 }
 
 tr:not(:first-child):hover {
     background-color: #D6EEEE;
 }
 
-#addButton:hover {
+#addBtn:hover {
     cursor: pointer;
     padding: 6px 5px 6px 5px;
-    display: block;
+}
+
+#updateBtn:hover {
+    cursor: pointer;
+}
+
+#deleteBtn:hover {
+    cursor: pointer;
 }
 
 

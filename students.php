@@ -40,6 +40,9 @@ if ($podaci->num_rows == 0) {
 
     <body>
         <div w3-include-html="menu.html" id="w3"></div>
+        <div>
+            <img src="img/students2.jpg"></img>
+        </div>
         <div class="body-wrap">
             <table id="students-table">
                 <thead class="thead">
@@ -75,7 +78,7 @@ if ($podaci->num_rows == 0) {
 
                 <div class="w3-container">
 
-                    <button id="btn-add" onclick="document.getElementById('id01').style.display='block'">Add new</button>
+                    <button id="btn-add" onclick="document.getElementById('id01').style.display='block'" style="font-weight: bold;">ADD NEW</button>
 
                     <div id="id01" class="w3-modal">
                         <div class="w3-modal-content" style="text-align: center;">
@@ -113,7 +116,7 @@ if ($podaci->num_rows == 0) {
                 <!-- <button id="btn-update" onclick="updateStudent()">Update</button> -->
                 <div class="w3-container">
 
-                    <button id="btn-update" onclick="document.getElementById('id01').style.display='block'">Update</button>
+                    <button id="btn-update" onclick="document.getElementById('id01').style.display='block'" style="font-weight: bold;">UPDATE</button>
 
                     <div id="id01" class="w3-modal">
                         <div class="w3-modal-content" style="text-align: center;">
@@ -148,13 +151,13 @@ if ($podaci->num_rows == 0) {
                 </div>
 
 
-                <button id="btn-delete" onclick="deleteStudent()">Delete</button>
+                <button id="btn-delete" onclick="deleteStudent()" style="font-weight: bold;">DELETE</button>
 
-                <button id="btn-sort" onclick="sortTable()">Sort</button>
+                <button id="btn-sort" onclick="sortTable()" style="font-weight: bold;">SORT</button>
 
             </div>
 
-
+        </div>
 
             <script src="script/app.js"></script>
             <script src="script/students.js"></script>
