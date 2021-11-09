@@ -4,6 +4,7 @@ require("model/examRegistration.php");
 require("model/student.php");
 require("model/subject.php");
 require("model/lecturer.php");
+// require("model/validation.php");
 
 session_start();
 
@@ -43,7 +44,6 @@ if ($podaci->num_rows == 0) {
 
     <body>
         <div w3-include-html="menu.html" id="w3"></div>
-
         <div class="body-wrap">
             <div style=" width:100%; display: inline-flex; margin-top: 2rem; background-color:rgb(211, 188, 166); padding-top: 4px; padding-bottom: 4px; text-align: center;">
                 <div style="padding-right: 3rem; padding-left: 30%;">

@@ -17,11 +17,18 @@ $('#addForm').submit(function() {
     request.done(function(response, textStatus, jqXHR) {
         if (response == "Success") {
             alert("Exam registration added successfully");
-            location.reload(true);
         } else {
-            alert("Exam registration cannot be added");
-            location.reload(true);
+            if (response == "Failed") {
+                alert("Exam registration cannot be added");
+            } else {
+                if (response == "Exists") {
+                    alert("Exam registration with positive grade for this student and this subject already exists.");
+                } else {
+                    alert("Grade input incorect.");
+                }
+            }
         }
+        location.reload(true);
     });
 
 })

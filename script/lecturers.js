@@ -35,11 +35,15 @@ $("#updateForm").submit(function() {
     request.done(function(response, textStatus, jqXHR) {
         if (response == "Success") {
             alert("Lecturer updated successfully");
-            location.reload(true);
         } else {
-            alert("Lecturer cannot be updated.");
-            location.reload(true);
+            if (response == "Failed") {
+                alert("Lecturer cannot be updated.");
+            } else {
+                alert("Input doesnt match required format.");
+            }
         }
+        location.reload(true);
+
     });
 
 })
@@ -63,11 +67,14 @@ $('#addForm').submit(function() {
     request.done(function(response, textStatus, jqXHR) {
         if (response == "Success") {
             alert("Lecturer added successfully");
-            location.reload(true);
         } else {
-            alert("Lecturer cannot be added");
-            location.reload(true);
+            if (response == "Failed") {
+                alert("Lecturer cannot be added.");
+            } else {
+                alert("Input doesnt match required format.");
+            }
         }
+        location.reload(true);
     });
 
 })

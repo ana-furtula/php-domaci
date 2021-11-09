@@ -116,9 +116,9 @@ if ($podaci->num_rows == 0) {
                 <!-- <button id="btn-update" onclick="updateStudent()">Update</button> -->
                 <div class="w3-container">
 
-                    <button id="btn-update" onclick="document.getElementById('id01').style.display='block'" style="font-weight: bold;">UPDATE</button>
+                    <button id="btn-update" onclick="document.getElementById('id02').style.display='block'" style="font-weight: bold;">UPDATE</button>
 
-                    <div id="id01" class="w3-modal">
+                    <div id="id02" class="w3-modal">
                         <div class="w3-modal-content" style="text-align: center;">
                             <header class="w3-container w3-teal">
                                 <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>

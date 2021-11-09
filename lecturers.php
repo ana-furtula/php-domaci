@@ -92,10 +92,10 @@ if ($data->num_rows == 0) {
                     <td style="width: 12%;">
                         <div class="w3-container">
 
-                            <button id="updateBtn" onclick="document.getElementById('id01').style.display='block'; document.getElementById('ID').setAttribute('value','<?php echo $red["ID"] ?>');" style="background-color: #FAEBD7; border-radius: 8px; border-color: white"><img src="img/refresh.png"></img></button>
+                            <button id="updateBtn" onclick="document.getElementById('id02').style.display='block'; document.getElementById('ID').setAttribute('value','<?php echo $red["ID"] ?>');" style="background-color: #FAEBD7; border-radius: 8px; border-color: white"><img src="img/refresh.png"></img></button>
                             <button id="deleteBtn" value="<?php echo $red["ID"] ?>" onclick="deleteLecturer(this)" style="background-color: #FAEBD7; border-radius: 8px; border-color: white"><img src="img/trash.png"></img></button>
 
-                            <div id="id01" class="w3-modal" style="display: none;">
+                            <div id="id02" class="w3-modal" style="display: none;">
                                 <div class="w3-modal-content" style="text-align: center;">
                                     <header class="w3-container w3-teal">
                                         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>

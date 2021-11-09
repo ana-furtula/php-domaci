@@ -29,6 +29,11 @@ class ExamRegistration{
         return $conn->query($query);
     }
 
+    public static function getByStudentAndSubjectIDs($studentId, $subjectId, mysqli $conn){
+        $query = "SELECT * FROM examregistration WHERE StudentID=$studentId AND SubjectID = $subjectId AND Grade>5";
+        return $conn->query($query);
+    }
+
     public static function deleteById($id, mysqli $conn){
         $query = "DELETE FROM examregistration WHERE id=$id";
         return $conn->query($query);

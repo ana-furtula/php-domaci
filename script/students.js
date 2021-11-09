@@ -41,11 +41,14 @@ $("#updateForm").submit(function() {
         request.done(function(response, textStatus, jqXHR) {
             if (response == "Success") {
                 alert("Student updated successfully");
-                location.reload(true);
             } else {
-                alert("Student cannot be updated.");
-                location.reload(true);
+                if (response == "Failed") {
+                    alert("Student cannot be updated.");
+                } else {
+                    alert("Input doesnt match required format.");
+                }
             }
+            location.reload(true);
         });
     }
 })
@@ -69,11 +72,14 @@ $('#addForm').submit(function() {
     request.done(function(response, textStatus, jqXHR) {
         if (response == "Success") {
             alert("Student added successfully");
-            location.reload(true);
         } else {
-            alert("Student cannot be added");
-            location.reload(true);
+            if (response == "Failed") {
+                alert("Student cannot be added.");
+            } else {
+                alert("Input doesnt match required format.");
+            }
         }
+        location.reload(true);
     });
 
 })
