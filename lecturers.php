@@ -98,7 +98,7 @@ if ($data->num_rows == 0) {
                             <div id="id02" class="w3-modal" style="display: none;">
                                 <div class="w3-modal-content" style="text-align: center;">
                                     <header class="w3-container w3-teal">
-                                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                                         <h2>Enter new data</h2>
                                     </header>
                                     <div class="w3-container">
