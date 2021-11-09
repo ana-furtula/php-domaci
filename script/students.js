@@ -2,22 +2,26 @@ function deleteStudent() {
     event.preventDefault();
 
     const checked = $('input[name=checked-donut]:checked');
-    request = $.ajax({
-        url: 'handler/student/delete.php',
-        type: 'post',
-        data: { 'ID': checked.val() }
-    });
+    if (typeof checked.val() === 'undefined') {
+        alert("You must choose a student.")
+        return;
+    } else {
+        request = $.ajax({
+            url: 'handler/student/delete.php',
+            type: 'post',
+            data: { 'ID': checked.val() }
+        });
 
-    request.done(function(response, textStatus, jqXHR) {
-        if (response == "Success") {
-            checked.closest('tr').remove();
-            alert('Student deleted');
-        } else {
-            alert('Student cannot be deleted');
-            location.reload(true);
-        }
-    });
-
+        request.done(function(response, textStatus, jqXHR) {
+            if (response == "Success") {
+                checked.closest('tr').remove();
+                alert('Student deleted');
+            } else {
+                alert('Student cannot be deleted');
+                location.reload(true);
+            }
+        });
+    }
 }
 
 $("#updateForm").submit(function() {
@@ -41,14 +45,15 @@ $("#updateForm").submit(function() {
         request.done(function(response, textStatus, jqXHR) {
             if (response == "Success") {
                 alert("Student updated successfully");
+                location.reload(true);
             } else {
                 if (response == "Failed") {
                     alert("Student cannot be updated.");
+                    location.reload(true);
                 } else {
                     alert("Input doesnt match required format.");
                 }
             }
-            location.reload(true);
         });
     }
 })
@@ -61,8 +66,6 @@ $('#addForm').submit(function() {
     const serijalized = $form.serialize();
     console.log(serijalized);
 
-    $input.prop('disabled', true);
-
     request = $.ajax({
         url: 'handler/student/add.php',
         type: 'post',
@@ -72,17 +75,38 @@ $('#addForm').submit(function() {
     request.done(function(response, textStatus, jqXHR) {
         if (response == "Success") {
             alert("Student added successfully");
+            location.reload(true);
         } else {
             if (response == "Failed") {
                 alert("Student cannot be added.");
+                location.reload(true);
             } else {
                 alert("Input doesnt match required format.");
             }
         }
-        location.reload(true);
     });
 
 })
+
+function isTaken(str) {
+    if (str.length < 9) {
+        document.getElementById("txtIsTaken").innerHTML = "Invalid format";
+        return;
+    } else {
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function() {
+            if (this.responseText == "Available") {
+                document.getElementById("txtIsTaken").style.color = "green";
+            }
+            document.getElementById("txtIsTaken").innerHTML = this.responseText;
+
+        }
+        xmlhttp.open("GET", "getIsTakenIndex.php?q=" + str);
+        xmlhttp.send();
+    }
+    document.getElementById("txtIsTaken").style.color = "red";
+    document.getElementById("txtIsTaken").innerHTML = "";
+}
 
 function sortTable() {
     var table, rows, switching, i, x, y, shouldSwitch;

@@ -19,7 +19,7 @@
     #students-table {
         padding-top: 2px;
         padding-bottom: 20px;
-        border: 2px solid black;
+        border: 2px solid #D2B48C;
         width: 80%;
         margin-left: 9%;
         margin-top: 0%;
@@ -47,6 +47,7 @@
         grid-gap: 10%;
         margin-left: 5%;
         margin-right: 5%;
+        margin-bottom: 5%;
     }
     
     #btn-add {

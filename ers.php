@@ -99,7 +99,7 @@ if ($podaci->num_rows == 0) {
                             <td><?php echo $red["Date"] ?></td>
                             <td><?php echo $red["Grade"] ?></td>
                             <td style="padding-left: 1rem;">
-                                <button id="deleteBtn" value="<?php echo $red["ID"] ?>" onclick="deleteLecturer(this)" style="background-color: rgb(214, 198, 183); border-radius: 8px; border-color: white"><img src="img/trash.png"></img></button>
+                                <button id="deleteBtn" value="<?php echo $red["ID"] ?>" onclick="deleteLecturer(this)" style="background-color: rgb(214, 198, 183); border-radius: 8px; border-color: transparent"><img src="img/delete.png"></img></button>
                             </td>
                             </tr>
                     <?php

@@ -97,7 +97,8 @@ if ($podaci->num_rows == 0) {
                                                 <input id="LastName" type="text" name="LastName" class="form-control" placeholder="Last name" value="" />
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                                <input id="Indeks" type="text" name="Indeks" class="form-control" placeholder="Index" value="" />
+                                                <input id="Indeks" type="text" onkeyup="isTaken(this.value)" name="Indeks" class="form-control" placeholder="Index" value="" />
+                                                <span id="txtIsTaken" style="color: red;"></span>
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
                                                 <button id="btnSave" type="submit" class="btn btn-success btn-block" style="color: white; background-color: teal; border: 1px solid white; padding: 0.5rem 3rem 0.5rem 3rem">Save
@@ -121,7 +122,7 @@ if ($podaci->num_rows == 0) {
                     <div id="id02" class="w3-modal">
                         <div class="w3-modal-content" style="text-align: center;">
                             <header class="w3-container w3-teal">
-                                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                                 <h2>Enter new data</h2>
                             </header>
                             <div class="w3-container">
@@ -133,9 +134,6 @@ if ($podaci->num_rows == 0) {
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
                                                 <input id="LastName" type="text" name="LastName" class="form-control" placeholder="Last name" value="" />
-                                            </div>
-                                            <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                                <input id="Indeks" type="text" name="Indeks" class="form-control" placeholder="Index" value="" />
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
                                                 <button id="btnUpdate" type="submit" class="btn btn-success btn-block" style="color: white; background-color: teal; border: 1px solid white; padding: 0.5rem 3rem 0.5rem 3rem">Submit

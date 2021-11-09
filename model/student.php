@@ -24,6 +24,11 @@ class Student{
         return $conn->query($query);
     }
 
+    public static function getIndexById($id, mysqli $conn){
+        $query = "SELECT Indeks FROM student WHERE id=$id";
+        return $conn->query($query);
+    }
+
     public static function deleteById($id, mysqli $conn){
         $query = "DELETE FROM student WHERE id=$id";
         return $conn->query($query);
@@ -36,6 +41,11 @@ class Student{
 
     public static function add(Student $student, mysqli $conn){
         $query = "INSERT INTO student(FirstName, LastName, Indeks) VALUES ('$student->firstName', '$student->lastName', '$student->indeks')";
+        return $conn->query($query);
+    }
+
+    public static function getAllIndexes(mysqli $conn){
+        $query = "SELECT Indeks FROM student";
         return $conn->query($query);
     }
 
