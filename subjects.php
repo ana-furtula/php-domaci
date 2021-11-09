@@ -12,12 +12,12 @@ if (!isset($_SESSION["user_id"])) {
 $podaci = Subject::getAll($conn);
 
 if (!$podaci) {
-    echo ("Nastala je greska pri preuzimanju podataka");
+    echo ("Error while fetching data");
     die();
 }
 
 if ($podaci->num_rows == 0) {
-    echo ("Nema predmeta!");
+    echo ("There are no subjects!");
     die();
 } else {
 

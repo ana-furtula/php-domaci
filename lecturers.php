@@ -17,7 +17,7 @@ if (!$data) {
 }
 
 if ($data->num_rows == 0) {
-    echo ("There is no lecturers!");
+    echo ("There are no lecturers!");
     die();
 } else {
 

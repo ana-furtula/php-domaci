@@ -16,12 +16,12 @@ if (!isset($_SESSION["user_id"])) {
 $podaci = ExamRegistration::getAll($conn);
 
 if (!$podaci) {
-    echo ("Nastala je greska pri preuzimanju podataka");
+    echo ("Error while fetching data");
     die();
 }
 
 if ($podaci->num_rows == 0) {
-    echo ("Nema prijava!");
+    echo ("There are no exam registrations!");
     die();
 } else {
 
@@ -39,7 +39,7 @@ if ($podaci->num_rows == 0) {
         <link rel="stylesheet" type="text/css" href="css/ers.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <title>Students</title>
+        <title>Exam registrations</title>
     </head>
 
     <body>

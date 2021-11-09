@@ -2,7 +2,6 @@
 
 require "dbBroker.php";
 require "model/student.php";
-// Array with indexes
 
 $q = $_REQUEST["q"];
 

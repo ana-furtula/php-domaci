@@ -12,12 +12,12 @@ if (!isset($_SESSION["user_id"])) {
 $podaci = Student::getAll($conn);
 
 if (!$podaci) {
-    echo ("Nastala je greska pri preuzimanju podataka");
+    echo ("Error while fetching data");
     die();
 }
 
 if ($podaci->num_rows == 0) {
-    echo ("Nema studenata!");
+    echo ("There are no students!");
     die();
 } else {
 
